@@ -11,34 +11,3 @@ class NoteApp extends StatelessWidget {
     return MaterialApp(debugShowCheckedModeBanner: false, home: App());
   }
 }
-
-class App extends StatelessWidget {
-  App({super.key});
-
-  late Box box;
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: () async {
-                  box = await Hive.openBox("hello");
-                  log("Box Opened");
-                },
-                child: Text('Open Box'),
-              ),
-
-              ElevatedButton(onPressed: () {}, child: Text('Put At')),
-
-              ElevatedButton(onPressed: () {}, child: Text('Display Data')),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
