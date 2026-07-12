@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/core/utils/constants/app_string.dart';
+import '../utils/constants/app_string.dart';
 
 import 'app_colors.dart';
 

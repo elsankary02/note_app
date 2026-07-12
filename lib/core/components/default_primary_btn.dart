@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/core/theme/app_colors.dart';
+import '../theme/app_colors.dart';
 
 class DefaultPrimaryBtn extends StatelessWidget {
   final String title;
