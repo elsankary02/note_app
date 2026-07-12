@@ -1,0 +1,25 @@
+{
+  "vocabularyNotes": "ملاحظات المفردات",
+  "allWords": "جميع الكلمات",
+
+  "wordDetails": "تفاصيل الكلمة",
+  "word": "الكلمة",
+  "newWord": "كلمة جديدة",
+
+  "similarWords": "كلمات مشابهة",
+  "examples": "أمثلة",
+
+  "language": "اللغة",
+  "arabic": "العربية",
+  "english": "الإنجليزية",
+  "all": "الكل",
+
+  "sortedBy": "الترتيب حسب",
+  "time": "الوقت",
+  "wordLength": "طول الكلمة",
+
+  "sortingType": "نوع الترتيب",
+  "ascending": "تصاعدي",
+  "descending": "تنازلي",
+  "emptyWordsMessage": "أضف أول كلمة وابدأ في تنمية مفرداتك."
+}

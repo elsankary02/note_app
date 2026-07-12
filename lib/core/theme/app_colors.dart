@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
-  // Primary Colors
-  static const Color red = Color(0xFFF44336);
-  static const Color black = Color(0xff000000);
-  static const Color white = Color(0xffffffff);
+  static const Color primary = Color(0xFF485BA7);
+  static const Color secondary = Color(0xFFFF8D28);
+
   static const Color transparent = Colors.transparent;
-  static const Color grey = Colors.grey;
-  // Note Colors
-  static const Color note1 = Color(0xFFe0e7f4);
-  static const Color note2 = Color(0xFFd1f9dd);
-  static const Color note3 = Color(0xFFfcf4a5);
-  static const Color note4 = Color(0xFFf5ebf2);
-  static const Color note5 = Color(0xFFfbc8c9);
-  // Splash Colors
-  static const Color splash1 = Color(0xFF485BA7);
-  static const Color splash2 = Color(0xFFff8d28);
+  static const Color black = Color(0xFF000000);
+  static const Color white = Color(0xFFFFFFFF);
+  static const Color grey = Color(0xFF9E9E9E);
+  static const Color red = Color(0xFFFF0000);
+
+  static const Color note1 = Color(0xFFE0E7F4);
+  static const Color note2 = Color(0xFFD1F9DD);
+  static const Color note3 = Color(0xFFFCF4A5);
+  static const Color note4 = Color(0xFFF5EBF2);
+  static const Color note5 = Color(0xFFFBC8C9);
 }

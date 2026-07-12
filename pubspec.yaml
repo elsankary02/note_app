@@ -37,6 +37,8 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   go_router: ^17.3.0
+  flutter_svg: ^2.3.0
+  easy_localization: ^3.0.8
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +65,7 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/
+    - assets/translations/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

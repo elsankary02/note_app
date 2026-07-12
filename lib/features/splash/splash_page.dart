@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+
 import '../../core/router/router.dart';
 import '../../core/router/routes.dart';
 import '../../core/theme/app_colors.dart';
@@ -28,7 +30,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.splash1,
+      backgroundColor: AppColors.primary,
 
       body: Center(
         child: Column(
@@ -37,7 +39,7 @@ class _SplashPageState extends State<SplashPage> {
             SizedBox(
               width: 220,
               child: Text(
-                "Paper who? Notepad’s got you covered!",
+                "emptyNotesMessage".tr(),
                 style: context.textTheme.headlineLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                   color: AppColors.white,

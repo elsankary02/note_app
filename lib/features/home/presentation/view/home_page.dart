@@ -1,10 +1,55 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:note_app/core/theme/app_colors.dart';
+import 'package:note_app/core/utils/constants/app_string.dart';
+import 'package:note_app/core/utils/constants/app_svg.dart';
+import 'package:note_app/core/utils/extensions/extension.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: _appBar(context),
+      floatingActionButton: _floatingActionBtn(),
+      body: const Center(child: Text('Home Page')),
+    );
+  }
+
+  FloatingActionButton _floatingActionBtn() {
+    return FloatingActionButton(
+      onPressed: () {},
+      shape: CircleBorder(),
+      backgroundColor: AppColors.primary,
+      child: const Icon(Icons.add),
+    );
+  }
+
+  AppBar _appBar(BuildContext context) {
+    return AppBar(
+      title: Text(
+        'vocabularyNotes'.tr(),
+        style: context.textTheme.titleMedium?.copyWith(
+          fontFamily: AppString.pacifico,
+        ),
+      ),
+      actions: [
+        Container(
+          height: 40,
+          width: 40,
+          margin: EdgeInsetsDirectional.only(end: 10),
+          decoration: BoxDecoration(
+            color: AppColors.primary,
+            shape: BoxShape.circle,
+          ),
+          child: IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(AppSvg.filter),
+          ),
+        ),
+      ],
+    );
   }
 }

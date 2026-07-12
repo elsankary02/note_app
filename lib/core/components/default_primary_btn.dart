@@ -33,7 +33,7 @@ class DefaultPrimaryBtn extends StatelessWidget {
     this.height = 56,
     this.disabledBackgroundColor = AppColors.grey,
     this.disabledForegroundColor = AppColors.white,
-    this.backgroundColor = AppColors.splash2,
+    this.backgroundColor = AppColors.secondary,
     this.elevation = 0,
     this.shadowColor,
     this.mainAxisSize = MainAxisSize.max,

@@ -1,0 +1,25 @@
+{
+  "vocabularyNotes": "Vocabulary Notes",
+  "allWords": "All Words",
+
+  "wordDetails": "Word Details",
+  "word": "Word",
+  "newWord": "New Word",
+
+  "similarWords": "Similar Words",
+  "examples": "Examples",
+
+  "language": "Language",
+  "arabic": "Arabic",
+  "english": "English",
+  "all": "All",
+
+  "sortedBy": "Sorted By",
+  "time": "Time",
+  "wordLength": "Word Length",
+
+  "sortingType": "Sorting Type",
+  "ascending": "Ascending",
+  "descending": "Descending",
+  "emptyWordsMessage": "Add your first word and grow your vocabulary."
+}
