@@ -8,7 +8,7 @@ class AppThemes {
     useMaterial3: true,
     brightness: Brightness.light,
     primaryColor: AppColors.primary,
-    fontFamily: AppString.inter,
+    fontFamily: AppString.sofiaPro,
     scaffoldBackgroundColor: AppColors.white,
     colorScheme: const ColorScheme.light(
       primary: AppColors.primary,
@@ -16,6 +16,10 @@ class AppThemes {
       surface: AppColors.white,
       onPrimary: AppColors.white,
       onSurface: AppColors.black,
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: AppColors.fillWhite,
     ),
     textTheme: TextTheme(
       // display
@@ -49,6 +53,7 @@ class AppThemes {
       elevation: 0,
       centerTitle: false,
     ),
+
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: AppColors.primary,
       foregroundColor: AppColors.white,
@@ -59,14 +64,18 @@ class AppThemes {
     brightness: Brightness.dark,
     primaryColor: AppColors.primary,
     useMaterial3: true,
-    fontFamily: AppString.inter,
+    fontFamily: AppString.sofiaPro,
     scaffoldBackgroundColor: AppColors.black,
     colorScheme: const ColorScheme.dark(
       primary: AppColors.primary,
       secondary: AppColors.secondary,
-      surface: Color(0xFF121212),
+      surface: AppColors.black,
       onPrimary: AppColors.white,
       onSurface: AppColors.white,
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: AppColors.fillBlack,
     ),
     textTheme: TextTheme(
       // display

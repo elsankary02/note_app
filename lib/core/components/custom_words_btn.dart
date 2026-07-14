@@ -23,6 +23,7 @@ class CustomWordsBtn extends StatelessWidget {
             title ?? "Test".tr(),
             style: context.textTheme.titleLarge?.copyWith(
               fontWeight: FontWeight.w700,
+              color: AppColors.black,
             ),
             textAlign: TextAlign.center,
           ),

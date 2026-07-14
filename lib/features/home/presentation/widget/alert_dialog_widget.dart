@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:note_app/core/components/default_text_form_feild.dart';
 import 'package:note_app/core/theme/app_colors.dart';
+import 'package:note_app/core/utils/constants/app_string.dart';
 import 'package:note_app/core/utils/extensions/extension.dart';
 import 'package:note_app/features/home/presentation/widget/color_picker_item.dart';
 
@@ -13,7 +14,7 @@ class AlertDialogWidget extends StatefulWidget {
 }
 
 class _AlertDialogWidgetState extends State<AlertDialogWidget> {
-  Color selectedColor = AppColors.primary;
+  Color selectedColor = AppColors.note1;
 
   @override
   Widget build(BuildContext context) {
@@ -23,24 +24,27 @@ class _AlertDialogWidgetState extends State<AlertDialogWidget> {
         "addNewWord".tr(),
         textAlign: TextAlign.center,
         style: context.textTheme.headlineSmall?.copyWith(
+          fontFamily: AppString.sofiaPro,
           fontWeight: FontWeight.w700,
+          color: AppColors.black,
         ),
       ),
       content: SizedBox(
         width: context.w,
         child: Column(
-          mainAxisSize: MainAxisSize.min, // تم تصحيح .min هنا لتعمل بشكل صحيح
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _buildTitle(context: context, title: "selectLanguage".tr()),
             const SizedBox(height: 16),
+            _buildLanguage(),
 
             _buildTitle(context: context, title: "selectColor".tr()),
             const SizedBox(height: 12),
-
             _buildColorPickerList(),
+
             const SizedBox(height: 12),
-            DefaultTextFormField(labelText: "test".tr()),
+            DefaultTextFormField(labelText: "enterWord".tr()),
           ],
         ),
       ),
@@ -54,15 +58,13 @@ class _AlertDialogWidgetState extends State<AlertDialogWidget> {
         scrollDirection: Axis.horizontal,
         itemCount: colors.length,
         itemBuilder: (context, index) {
-          final listColors = colors[index];
-          final isSelected = selectedColor == listColors;
-
+          final isSelected = selectedColor == colors[index];
           return ColorPickerItem(
-            color: listColors,
             isSelected: isSelected,
+            color: colors[index],
             onTap: () {
               setState(() {
-                selectedColor = listColors;
+                selectedColor = colors[index];
               });
             },
           );
@@ -76,17 +78,33 @@ class _AlertDialogWidgetState extends State<AlertDialogWidget> {
       title,
       style: context.textTheme.titleSmall?.copyWith(
         fontWeight: FontWeight.w700,
+        fontFamily: AppString.sofiaPro,
+        color: AppColors.black,
+      ),
+    );
+  }
+
+  Widget _buildLanguage() {
+    return Container(
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(8),
       ),
     );
   }
 }
 
 List<Color> colors = [
-  AppColors.primary,
-  AppColors.grey,
-  AppColors.red,
   AppColors.note1,
   AppColors.note2,
   AppColors.note3,
   AppColors.note4,
+  AppColors.note5,
+  AppColors.note6,
+  AppColors.note7,
+  AppColors.note8,
+  AppColors.note9,
+  AppColors.note10,
+  AppColors.note11,
+  AppColors.note12,
 ];

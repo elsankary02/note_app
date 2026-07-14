@@ -79,16 +79,16 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Inter
-      fonts:
-        - asset: assets/fonts/inter/Inter_Regular.ttf
-          weight: 400
-        - asset: assets/fonts/inter/Inter-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/inter/Inter-Bold.ttf
-          weight: 700
     - family: Pacifico
       fonts:
         - asset: assets/fonts/pacifico/Pacifico-Regular.ttf
+    - family: SofiaSans
+      fonts:
+        - asset: assets/fonts/sofia_sans/SofiaSans-Bold.ttf
+          weight: 400
+        - asset: assets/fonts/sofia_sans/SofiaSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/sofia_sans/SofiaSans-Bold.ttf
+          weight: 700
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

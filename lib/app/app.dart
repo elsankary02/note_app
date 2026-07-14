@@ -17,7 +17,7 @@ class NoteApp extends StatelessWidget {
       locale: context.locale,
       darkTheme: AppThemes.dark,
       theme: AppThemes.light,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
     );
   }
 }

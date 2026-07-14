@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/core/utils/extensions/extension.dart';
 
 import '../theme/app_colors.dart';
 
@@ -30,10 +31,7 @@ class DefaultTextFormField extends StatefulWidget {
     this.validator,
     this.onChanged,
     this.autovalidateMode,
-    this.labelStyle = const TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.w400,
-    ),
+    this.labelStyle,
     this.onFieldSubmitted,
     this.maxLength,
     this.cursorColor,
@@ -52,13 +50,9 @@ class DefaultTextFormField extends StatefulWidget {
     this.suffixText,
     this.suffixStyle,
     this.prefixStyle,
-    this.style = const TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-    this.radius = 4,
-    this.contentPadding = const EdgeInsetsDirectional.only(
-      bottom: 20,
-      top: 20,
-      start: 16,
-    ),
+    this.style,
+    this.radius = 9,
+    this.contentPadding = const EdgeInsets.all(15),
     this.hintText,
     this.hintStyle,
     this.prefixIconConstraints,
@@ -79,7 +73,12 @@ class _DefaultTextFormFieldState extends State<DefaultTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      style: widget.style,
+      style:
+          widget.style ??
+          context.textTheme.titleMedium?.copyWith(
+            fontWeight: FontWeight.w500,
+            color: context.theme.colorScheme.onSurface,
+          ),
       autovalidateMode: widget.autovalidateMode,
       autofocus: widget.autofocus,
       validator: widget.validator,
@@ -96,7 +95,12 @@ class _DefaultTextFormFieldState extends State<DefaultTextFormField> {
         fillColor: widget.fillColor,
         prefixIcon: widget.prefixIcon,
         hintText: widget.hintText,
-        hintStyle: widget.hintStyle,
+        hintStyle:
+            widget.hintStyle ??
+            context.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w500,
+              color: context.theme.colorScheme.onSurface.withAlpha(50),
+            ),
         prefixStyle: widget.prefixStyle,
         prefixText: widget.prefixText,
         prefixIconConstraints: widget.prefixIconConstraints,
@@ -120,7 +124,12 @@ class _DefaultTextFormFieldState extends State<DefaultTextFormField> {
         suffixStyle: widget.suffixStyle,
         suffixText: widget.suffixText,
         labelText: widget.labelText,
-        labelStyle: widget.labelStyle,
+        labelStyle:
+            widget.labelStyle ??
+            context.textTheme.titleMedium?.copyWith(
+              fontWeight: FontWeight.w500,
+              color: context.theme.colorScheme.onSurface.withAlpha(50),
+            ),
         enabledBorder: _outlineInputBorder(
           color: widget.enabledBorderColor,
           radius: widget.radius,

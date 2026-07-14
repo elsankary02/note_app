@@ -39,21 +39,8 @@ class HomePage extends StatelessWidget {
           fontFamily: AppString.pacifico,
         ),
       ),
-      actions: [
-        Container(
-          height: 40,
-          width: 40,
-          margin: const EdgeInsetsDirectional.only(end: 10),
-          decoration: const BoxDecoration(
-            color: AppColors.primary,
-            shape: BoxShape.circle,
-          ),
-          child: IconButton(
-            onPressed: () {},
-            icon: SvgPicture.asset(AppSvg.filter),
-          ),
-        ),
-      ],
+      actionsPadding: EdgeInsetsDirectional.only(end: context.h * 0.02),
+      actions: [_action(context)],
     );
   }
 
@@ -66,6 +53,23 @@ class HomePage extends StatelessWidget {
       shape: const CircleBorder(),
       backgroundColor: AppColors.primary,
       child: const Icon(Icons.add),
+    );
+  }
+
+  SizedBox _action(BuildContext context) {
+    return SizedBox(
+      height: context.h * 0.050,
+      width: context.h * 0.050,
+      child: IconButton(
+        onPressed: () {},
+        icon: SvgPicture.asset(
+          AppSvg.filter,
+          colorFilter: ColorFilter.mode(
+            context.theme.colorScheme.onSurface,
+            BlendMode.srcIn,
+          ),
+        ),
+      ),
     );
   }
 }

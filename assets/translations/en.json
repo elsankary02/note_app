@@ -25,5 +25,6 @@
   "Test": "Test",
   "addNewWord": "Add New Word",
   "selectColor": "Select Category Color",
- "selectLanguage": "Select Category Language" 
+ "selectLanguage": "Select Category Language",
+ "enterWord": "Enter a new word"
 }
