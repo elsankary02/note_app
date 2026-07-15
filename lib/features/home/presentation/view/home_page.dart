@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/constants/app_string.dart';
 import '../../../../core/utils/constants/app_svg.dart';
@@ -14,12 +15,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: _floatingActionBtn(context: context),
+      floatingActionButton: _buildFloatingActionBtn(context: context),
       body: SafeArea(
         top: false,
         child: CustomScrollView(
           slivers: [
-            _sliverAppBar(context: context),
+            _buildSliverAppBar(context: context),
             SliverGridViewWidget(),
           ],
         ),
@@ -27,7 +28,21 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _sliverAppBar({required BuildContext context}) {
+  FloatingActionButton _buildFloatingActionBtn({
+    required BuildContext context,
+  }) {
+    return FloatingActionButton(
+      onPressed: () => showDialog(
+        context: context,
+        builder: (context) => AlertDialogWidget(),
+      ),
+      shape: const CircleBorder(),
+      backgroundColor: AppColors.primary,
+      child: const Icon(Icons.add),
+    );
+  }
+
+  Widget _buildSliverAppBar({required BuildContext context}) {
     return SliverAppBar(
       floating: true,
       snap: true,
@@ -40,23 +55,11 @@ class HomePage extends StatelessWidget {
         ),
       ),
       actionsPadding: EdgeInsetsDirectional.only(end: context.h * 0.02),
-      actions: [_action(context)],
+      actions: [_buildAction(context)],
     );
   }
 
-  FloatingActionButton _floatingActionBtn({required BuildContext context}) {
-    return FloatingActionButton(
-      onPressed: () => showDialog(
-        context: context,
-        builder: (context) => AlertDialogWidget(),
-      ),
-      shape: const CircleBorder(),
-      backgroundColor: AppColors.primary,
-      child: const Icon(Icons.add),
-    );
-  }
-
-  SizedBox _action(BuildContext context) {
+  SizedBox _buildAction(BuildContext context) {
     return SizedBox(
       height: context.h * 0.050,
       width: context.h * 0.050,

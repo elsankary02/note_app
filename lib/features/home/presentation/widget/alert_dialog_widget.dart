@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:note_app/features/home/presentation/widget/category_language_widget.dart';
+import 'category_language_widget.dart';
 
 import '../../../../core/components/default_text_form_feild.dart';
 import '../../../../core/theme/app_colors.dart';
