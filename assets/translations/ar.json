@@ -27,6 +27,7 @@
   "wordTooShort": "يجب أن تحتوي الكلمة على حرفين على الأقل",
   "word_details": "تفاصيل الكلمة",
   "similar_words": "الكلمات الشبيهة",
+  "new_similar_word": "كلمة مشابهة جديدة",
   "new_example": "مثال جديد",
   "add_example": "إضافة مثال",
   "add_similar": "إضافة كلمة شبيهة"

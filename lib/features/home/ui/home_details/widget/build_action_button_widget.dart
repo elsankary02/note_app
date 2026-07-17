@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/core/theme/app_colors.dart';
-import 'package:note_app/features/home/data/model/note_model.dart';
+import '../../../../../core/theme/app_colors.dart';
+import '../../../data/model/note_model.dart';
 
 class BuildActionButtonWidget extends StatelessWidget {
   final TestNoteModel note;

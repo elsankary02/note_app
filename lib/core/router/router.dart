@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:note_app/features/home/data/model/note_model.dart';
+import '../../features/home/data/model/note_model.dart';
 
 import '../../features/home/ui/home/view/home_page.dart';
 import '../../features/home/ui/home_details/view/home_details_page.dart';

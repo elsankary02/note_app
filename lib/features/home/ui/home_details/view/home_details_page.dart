@@ -1,11 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:note_app/core/utils/extensions/extension.dart';
-import 'package:note_app/features/home/data/model/note_model.dart';
-import 'package:note_app/features/home/ui/home_details/widget/build_action_button_widget.dart';
-import 'package:note_app/features/home/ui/home_details/widget/build_default_alert_dialog_widget.dart';
-import 'package:note_app/features/home/ui/home_details/widget/build_list_tile_widget.dart';
+import '../../../../../core/utils/extensions/extension.dart';
+import '../../../data/model/note_model.dart';
+import '../widget/build_action_button_widget.dart';
+import '../widget/build_default_alert_dialog_widget.dart';
+import '../widget/build_list_tile_widget.dart';
 
 class HomeDetailsPage extends StatelessWidget {
   final TestNoteModel note;
@@ -41,6 +41,9 @@ class HomeDetailsPage extends StatelessWidget {
                 note: note,
                 title: "add_similar".tr(),
                 lable: "new_similar_word".tr(),
+                onTap: () {
+                  // TODO: similar OnTap
+                },
               ),
             ),
           ),
@@ -56,6 +59,9 @@ class HomeDetailsPage extends StatelessWidget {
                 note: note,
                 title: "add_example".tr(),
                 lable: "new_example".tr(),
+                onTap: () {
+                  // TODO: example OnTap
+                },
               ),
             ),
           ),

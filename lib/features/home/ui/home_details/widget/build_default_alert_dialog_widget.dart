@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/core/utils/extensions/extension.dart';
-import 'package:note_app/features/home/data/model/note_model.dart';
-import 'package:note_app/features/home/ui/home/widget/build_alert_title_widget.dart';
-import 'package:note_app/features/home/ui/home/widget/build_done_btn_widget.dart';
-import 'package:note_app/features/home/ui/home/widget/build_form_field_widget.dart';
+import '../../../../../core/utils/extensions/extension.dart';
+import '../../../data/model/note_model.dart';
+import '../../home/widget/build_alert_title_widget.dart';
+import '../../home/widget/build_done_btn_widget.dart';
+import '../../home/widget/build_form_field_widget.dart';
 
 class CustomAlertDialog extends StatefulWidget {
   final TestNoteModel note;
   final String title;
   final String lable;
+  final VoidCallback? onTap;
   const CustomAlertDialog({
     super.key,
     required this.note,
     required this.title,
     required this.lable,
+    this.onTap,
   });
 
   @override
@@ -59,7 +61,7 @@ class _CustomAlertDialogState extends State<CustomAlertDialog> {
       actions: [
         // TODO: Refc This Local
         BuildDoneBtnWidget(
-          formKey: _formKey,
+          onTap: widget.onTap,
           textController: textController,
           selectedColor: widget.note.color,
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:note_app/core/utils/constants/app_svg.dart';
-import 'package:note_app/core/utils/extensions/extension.dart';
+import '../../../../../core/utils/constants/app_svg.dart';
+import '../../../../../core/utils/extensions/extension.dart';
 
 class BuildFilterActionWidget extends StatelessWidget {
   const BuildFilterActionWidget({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/core/theme/app_colors.dart';
-import 'package:note_app/core/utils/extensions/extension.dart';
+import '../../../../../core/theme/app_colors.dart';
+import '../../../../../core/utils/extensions/extension.dart';
 
 class BuildCategoryTextWidget extends StatelessWidget {
   final String title;

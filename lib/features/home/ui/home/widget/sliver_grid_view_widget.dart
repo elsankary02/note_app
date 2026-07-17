@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:note_app/features/home/logic/test_note_cubit/test_note_cubit.dart';
+import '../../../logic/test_note_cubit/test_note_cubit.dart';
 
 import '../../../../../core/components/custom_words_btn.dart';
 import '../../../../../core/router/routes.dart';

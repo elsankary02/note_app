@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:note_app/features/home/data/model/note_model.dart';
+import '../../data/model/note_model.dart';
 
 part 'test_note_state.dart';
 
