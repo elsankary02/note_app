@@ -5,7 +5,7 @@ abstract class TestNoteState {}
 final class TestNoteInitial extends TestNoteState {}
 
 final class TestNoteAdd extends TestNoteState {
-  final List<NoteModel> noteList;
+  final List<TestNoteModel> noteList;
 
   TestNoteAdd({required this.noteList});
 }

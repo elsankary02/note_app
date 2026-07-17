@@ -5,9 +5,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:note_app/features/home/logic/test_note_cubit/test_note_cubit.dart';
 
-import '../../../../core/components/custom_words_btn.dart';
-import '../../../../core/router/routes.dart';
-import '../../../../core/utils/extensions/extension.dart';
+import '../../../../../core/components/custom_words_btn.dart';
+import '../../../../../core/router/routes.dart';
+import '../../../../../core/utils/extensions/extension.dart';
 
 class GridViewWidget extends StatelessWidget {
   const GridViewWidget({super.key});
@@ -24,7 +24,7 @@ class GridViewWidget extends StatelessWidget {
         if (state is TestNoteAdd) {
           return GridView.builder(
             padding: EdgeInsets.symmetric(
-              horizontal: context.h * 0.032,
+              horizontal: context.h * 0.02,
               vertical: context.h * 0.02,
             ),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

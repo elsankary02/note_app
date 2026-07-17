@@ -27,8 +27,11 @@ class BuildDoneBtnWidget extends StatelessWidget {
       ),
       onTap: () {
         if (!formKey.currentState!.validate()) return;
-        context.pop<NoteModel>(
-          NoteModel(title: textController.text.trim(), color: _selectedColor),
+        context.pop<TestNoteModel>(
+          TestNoteModel(
+            title: textController.text.trim(),
+            color: _selectedColor,
+          ),
         );
       },
     );

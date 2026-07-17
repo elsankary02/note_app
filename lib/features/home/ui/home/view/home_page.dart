@@ -4,8 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app/core/utils/constants/app_string.dart';
 import 'package:note_app/core/utils/extensions/extension.dart';
 import 'package:note_app/features/home/logic/test_note_cubit/test_note_cubit.dart';
-import 'package:note_app/features/home/ui/widget/build_filter_action_widget.dart';
-import 'package:note_app/features/home/ui/widget/build_floating_action_button_widget.dart';
+import 'package:note_app/features/home/ui/home/widget/build_filter_action_widget.dart';
+import 'package:note_app/features/home/ui/home/widget/build_floating_action_button_widget.dart';
 
 import '../widget/sliver_grid_view_widget.dart';
 
@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
         builder: (context, state) => Scaffold(
           floatingActionButton: BuildFloatingActionButtonWidget(),
           appBar: _buildAppBarFunc(context: context),
-          body: SafeArea(top: false, child: GridViewWidget()),
+          body: GridViewWidget(),
         ),
       ),
     );
@@ -33,6 +33,7 @@ class HomePage extends StatelessWidget {
         'vocabularyNotes'.tr(),
         style: context.textTheme.titleMedium?.copyWith(
           fontFamily: AppString.pacifico,
+          fontWeight: FontWeight.w700,
         ),
       ),
       actionsPadding: EdgeInsetsDirectional.only(end: context.h * 0.02),

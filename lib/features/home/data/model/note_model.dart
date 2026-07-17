@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class NoteModel {
+class TestNoteModel {
   final String title;
   final Color color;
 
-  NoteModel({required this.title, required this.color});
+  TestNoteModel({required this.title, required this.color});
 }

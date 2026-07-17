@@ -1,13 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:note_app/features/home/ui/widget/build_alert_title_widget.dart';
-import 'package:note_app/features/home/ui/widget/build_category_color_widget.dart';
-import 'package:note_app/features/home/ui/widget/build_category_text_widget.dart';
-import 'package:note_app/features/home/ui/widget/build_done_btn_widget.dart';
-import 'package:note_app/features/home/ui/widget/build_form_field_widget.dart';
+import 'package:note_app/features/home/ui/home/widget/build_alert_title_widget.dart';
+import 'package:note_app/features/home/ui/home/widget/build_category_color_widget.dart';
+import 'package:note_app/features/home/ui/home/widget/build_category_text_widget.dart';
+import 'package:note_app/features/home/ui/home/widget/build_done_btn_widget.dart';
+import 'package:note_app/features/home/ui/home/widget/build_form_field_widget.dart';
 
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/utils/extensions/extension.dart';
+import '../../../../../core/theme/app_colors.dart';
+import '../../../../../core/utils/extensions/extension.dart';
 
 class AlertDialogWidget extends StatefulWidget {
   const AlertDialogWidget({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/features/home/ui/widget/category_color_widget.dart';
+import 'package:note_app/features/home/ui/home/widget/category_color_widget.dart';
 
 class BuildCategoryColorWidget extends StatelessWidget {
   final ValueChanged<Color> onTap;

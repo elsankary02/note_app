@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app/core/theme/app_colors.dart';
 import 'package:note_app/features/home/data/model/note_model.dart';
 import 'package:note_app/features/home/logic/test_note_cubit/test_note_cubit.dart';
-import 'package:note_app/features/home/ui/widget/alert_dialog_widget.dart';
+import 'package:note_app/features/home/ui/home/widget/alert_dialog_widget.dart';
 
 class BuildFloatingActionButtonWidget extends StatelessWidget {
   const BuildFloatingActionButtonWidget({super.key});
@@ -14,7 +14,7 @@ class BuildFloatingActionButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: () async {
-        final note = await showDialog<NoteModel>(
+        final note = await showDialog<TestNoteModel>(
           context: context,
 
           builder: (context) => AlertDialogWidget(),
