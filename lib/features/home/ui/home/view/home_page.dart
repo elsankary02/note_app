@@ -7,7 +7,7 @@ import '../../../logic/test_note_cubit/test_note_cubit.dart';
 import '../widget/build_filter_action_widget.dart';
 import '../widget/build_floating_action_button_widget.dart';
 
-import '../widget/sliver_grid_view_widget.dart';
+import '../widget/grid_view_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
