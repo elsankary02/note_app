@@ -8,7 +8,7 @@ class WordTypeAdapter extends TypeAdapter<WordModel> {
       indexAtDatabase: reader.readInt(),
       text: reader.readString(),
       colorCode: reader.readInt(),
-      isArebic: reader.readBool(),
+      isArabic: reader.readBool(),
       arSimilarWords: reader.readStringList(),
       enSimilarWords: reader.readStringList(),
       arExamples: reader.readStringList(),
@@ -24,7 +24,7 @@ class WordTypeAdapter extends TypeAdapter<WordModel> {
     writer.writeInt(obj.indexAtDatabase);
     writer.writeString(obj.text);
     writer.writeInt(obj.colorCode);
-    writer.writeBool(obj.isArebic);
+    writer.writeBool(obj.isArabic);
     writer.writeStringList(obj.arSimilarWords);
     writer.writeStringList(obj.enSimilarWords);
     writer.writeStringList(obj.arExamples);
