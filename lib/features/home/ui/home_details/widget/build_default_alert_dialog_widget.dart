@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:note_app/core/theme/app_colors.dart';
-import 'package:note_app/features/home/ui/home/widget/build_category_text_widget.dart';
+import '../../../../../core/theme/app_colors.dart';
+import '../../home/widget/build_category_text_widget.dart';
 
 import '../../../../../core/utils/extensions/extension.dart';
 import '../../../data/model/note_model.dart';

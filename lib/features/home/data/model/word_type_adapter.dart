@@ -1,5 +1,5 @@
 import 'package:hive_flutter/adapters.dart';
-import 'package:note_app/features/home/data/model/word_model.dart';
+import 'word_model.dart';
 
 class WordTypeAdapter extends TypeAdapter<WordModel> {
   @override
