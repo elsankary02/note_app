@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../features/home/data/model/note_model.dart';
 
 import '../../features/home/ui/home/view/home_page.dart';
 import '../../features/home/ui/home_details/view/home_details_page.dart';
@@ -27,8 +26,7 @@ final GoRouter router = GoRouter(
       path: Routes.homeDetailsPage,
       name: Routes.homeDetailsPage,
       builder: (BuildContext context, GoRouterState state) {
-        final note = state.extra as TestNoteModel;
-        return HomeDetailsPage(note: note);
+        return HomeDetailsPage();
       },
     ),
   ],

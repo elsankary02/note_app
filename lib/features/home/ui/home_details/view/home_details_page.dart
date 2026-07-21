@@ -3,14 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/extensions/extension.dart';
-import '../../../data/model/note_model.dart';
 import '../widget/build_action_button_widget.dart';
 import '../widget/build_default_alert_dialog_widget.dart';
 import '../widget/build_list_tile_widget.dart';
 
 class HomeDetailsPage extends StatefulWidget {
-  final TestNoteModel note;
-  const HomeDetailsPage({super.key, required this.note});
+  const HomeDetailsPage({super.key});
 
   @override
   State<HomeDetailsPage> createState() => _HomeDetailsPageState();
@@ -20,7 +18,6 @@ class _HomeDetailsPageState extends State<HomeDetailsPage> {
   @override
   Widget build(BuildContext context) {
     final style = context.textTheme.headlineSmall?.copyWith(
-      color: widget.note.color,
       fontWeight: FontWeight.w900,
     );
     return Scaffold(
@@ -34,17 +31,16 @@ class _HomeDetailsPageState extends State<HomeDetailsPage> {
           Text("word".tr(), style: style),
           SizedBox(height: context.h * .015),
 
-          BuildListTileWidget(note: widget.note),
+          BuildListTileWidget(),
           SizedBox(height: context.h * .05),
 
           BuildActionButtonWidget(
             title: "similarWords".tr(),
             style: style,
-            note: widget.note,
+
             onTap: () => showDialog(
               context: context,
               builder: (context) => CustomAlertDialog(
-                note: widget.note,
                 title: "add_similar".tr(),
                 lable: "new_similar_word".tr(),
                 doneOnTap: () {
@@ -59,11 +55,10 @@ class _HomeDetailsPageState extends State<HomeDetailsPage> {
           BuildActionButtonWidget(
             title: "examples".tr(),
             style: style,
-            note: widget.note,
+
             onTap: () => showDialog(
               context: context,
               builder: (context) => CustomAlertDialog(
-                note: widget.note,
                 title: "add_example".tr(),
                 lable: "new_example".tr(),
                 doneOnTap: () {
@@ -82,7 +77,7 @@ class _HomeDetailsPageState extends State<HomeDetailsPage> {
       title: Text("wordDetails".tr(), style: style),
       leading: IconButton(
         onPressed: () => context.pop(),
-        icon: Icon(Icons.arrow_back_ios_new_outlined, color: widget.note.color),
+        icon: Icon(Icons.arrow_back_ios_new_outlined),
       ),
       centerTitle: true,
       actions: [
@@ -90,7 +85,7 @@ class _HomeDetailsPageState extends State<HomeDetailsPage> {
           onPressed: () {
             //TODO: Delete
           },
-          icon: Icon(Icons.delete, color: widget.note.color),
+          icon: Icon(Icons.delete),
         ),
       ],
     );

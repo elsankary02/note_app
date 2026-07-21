@@ -2,17 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/utils/extensions/extension.dart';
-import '../../../data/model/note_model.dart';
 
 class BuildListTileWidget extends StatelessWidget {
-  final TestNoteModel note;
   final bool? isBookIcon;
   final String? languageCode;
   final Widget? trailing;
   final VoidCallback? onPressed;
   const BuildListTileWidget({
     super.key,
-    required this.note,
     this.isBookIcon = true,
     this.trailing,
     this.onPressed,
@@ -35,17 +32,16 @@ class BuildListTileWidget extends StatelessWidget {
           shape: BoxShape.circle,
         ),
         child: isBookIcon == true
-            ? Icon(Icons.menu_book_rounded, color: note.color)
+            ? Icon(Icons.menu_book_rounded)
             : Text(
                 languageCode ?? "Ar",
                 style: context.textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w600,
-                  color: note.color,
                 ),
               ),
       ),
       title: Text(
-        note.title,
+        " note.title",
         style: context.textTheme.titleLarge?.copyWith(
           fontWeight: FontWeight.w700,
           color: AppColors.white,
@@ -61,7 +57,7 @@ class BuildListTileWidget extends StatelessWidget {
                 )),
 
       shape: ContinuousRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      tileColor: note.color,
+      // tileColor: note.color,
     );
   }
 }

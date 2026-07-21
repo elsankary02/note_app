@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+
 import '../../../../../core/theme/app_colors.dart';
-import '../../../data/model/note_model.dart';
 
 class BuildActionButtonWidget extends StatelessWidget {
-  final TestNoteModel note;
   final TextStyle? style;
   final String title;
   final VoidCallback? onTap;
@@ -11,7 +10,6 @@ class BuildActionButtonWidget extends StatelessWidget {
   const BuildActionButtonWidget({
     super.key,
     required this.onTap,
-    required this.note,
     this.style,
     required this.title,
   });
@@ -26,7 +24,7 @@ class BuildActionButtonWidget extends StatelessWidget {
           onTap: onTap,
           child: Container(
             decoration: BoxDecoration(
-              color: note.color,
+              // color: note.color,
               borderRadius: BorderRadius.circular(8),
             ),
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
