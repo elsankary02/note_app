@@ -2,11 +2,11 @@ import 'dart:math';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:note_app/core/enums/language_filter.dart';
-import 'package:note_app/core/enums/sortedby.dart';
-import 'package:note_app/core/enums/sorting_type.dart';
-import 'package:note_app/core/utils/constants/app_string.dart';
-import 'package:note_app/features/home/data/model/word_model.dart';
+import '../../../../core/enums/language_filter.dart';
+import '../../../../core/enums/sortedby.dart';
+import '../../../../core/enums/sorting_type.dart';
+import '../../../../core/utils/constants/app_string.dart';
+import '../../data/model/word_model.dart';
 
 part 'read_data_state.dart';
 
