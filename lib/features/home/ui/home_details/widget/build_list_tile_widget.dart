@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/utils/extensions/extension.dart';
 
 class BuildListTileWidget extends StatelessWidget {
@@ -41,10 +40,10 @@ class BuildListTileWidget extends StatelessWidget {
               ),
       ),
       title: Text(
-        " note.title",
+        "Title",
         style: context.textTheme.titleLarge?.copyWith(
           fontWeight: FontWeight.w700,
-          color: AppColors.white,
+          color: context.onSurface,
         ),
       ),
       trailing:
@@ -52,7 +51,7 @@ class BuildListTileWidget extends StatelessWidget {
           (onPressed == null
               ? null
               : IconButton(
-                  icon: Icon(Icons.delete, color: AppColors.white),
+                  icon: Icon(Icons.delete, color: context.onSurface),
                   onPressed: onPressed,
                 )),
 

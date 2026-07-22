@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../core/theme/app_colors.dart';
+import 'package:note_app/core/utils/extensions/extension.dart';
 
 class BuildActionButtonWidget extends StatelessWidget {
   final TextStyle? style;
@@ -28,7 +27,7 @@ class BuildActionButtonWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
             ),
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            child: Icon(Icons.add, color: AppColors.white),
+            child: Icon(Icons.add, color: context.onSurface),
           ),
         ),
       ],

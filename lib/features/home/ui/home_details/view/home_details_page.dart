@@ -21,7 +21,7 @@ class _HomeDetailsPageState extends State<HomeDetailsPage> {
       fontWeight: FontWeight.w900,
     );
     return Scaffold(
-      appBar: _buildAppBarFunc(context: context, style: style),
+      appBar: _buildAppBarFunc(context: context),
       body: ListView(
         padding: EdgeInsets.symmetric(
           horizontal: context.h * 0.02,
@@ -72,14 +72,14 @@ class _HomeDetailsPageState extends State<HomeDetailsPage> {
     );
   }
 
-  AppBar _buildAppBarFunc({required BuildContext context, TextStyle? style}) {
+  AppBar _buildAppBarFunc({required BuildContext context}) {
     return AppBar(
-      title: Text("wordDetails".tr(), style: style),
+      title: Text("wordDetails".tr()),
       leading: IconButton(
         onPressed: () => context.pop(),
         icon: Icon(Icons.arrow_back_ios_new_outlined),
       ),
-      centerTitle: true,
+     
       actions: [
         IconButton(
           onPressed: () {

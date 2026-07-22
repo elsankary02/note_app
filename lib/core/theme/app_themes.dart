@@ -47,11 +47,18 @@ class AppThemes {
       bodyMedium: const TextStyle(fontSize: 14),
       bodySmall: const TextStyle(fontSize: 12),
     ),
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       backgroundColor: AppColors.white,
       foregroundColor: AppColors.black,
       elevation: 0,
-      centerTitle: false,
+      surfaceTintColor: Colors.transparent,
+      titleTextStyle: TextStyle(
+        fontSize: 22,
+        color: AppColors.black,
+        fontFamily: AppString.pacifico,
+        fontWeight: FontWeight.w700,
+      ),
+      centerTitle: true,
     ),
 
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
@@ -103,11 +110,18 @@ class AppThemes {
       bodyMedium: const TextStyle(fontSize: 14),
       bodySmall: const TextStyle(fontSize: 12),
     ),
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       backgroundColor: AppColors.black,
       foregroundColor: AppColors.white,
       elevation: 0,
-      centerTitle: false,
+      surfaceTintColor: Colors.transparent,
+      titleTextStyle: TextStyle(
+        fontSize: 22,
+        color: AppColors.white,
+        fontFamily: AppString.pacifico,
+        fontWeight: FontWeight.w700,
+      ),
+      centerTitle: true,
     ),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: AppColors.primary,
